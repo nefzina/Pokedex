@@ -1,4 +1,4 @@
-PokemonCard = () => {
+const PokemonCard = () => {
     return (
     <figure>
         <img 
@@ -7,6 +7,6 @@ PokemonCard = () => {
         />
         <figcaption>bulbasaur</figcaption>
     </figure>
-    )
+    );
 }
 export default PokemonCard;

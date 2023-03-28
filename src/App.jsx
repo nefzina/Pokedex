@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import PokemonCard from './composants/PokemonCard'
 
-App = () => {
+const App = () => {
   return (
     <div>
       <PokemonCard />
