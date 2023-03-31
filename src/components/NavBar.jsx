@@ -1,15 +1,13 @@
 import React from "react";
-const NavBar = ({len, setPokemonIndex, index}) => {
-    console.log(index);
-    
+const NavBar = ({pokemonList, pokemonKey, setKey}) => {    
 
     return (
         <React.Fragment>
-        { index > 0 ? 
-        <button onClick ={() => {setPokemonIndex(index - 1)}}>Previous</button>: null}
-
-        { index < (len-1) ? 
-        <button onClick ={() => {setPokemonIndex(index + 1)}}>Next</button>: null}      
+            {pokemonList.map((pokemon) => (
+                <button key={pokemon.name} onClick={()=>
+                setKey(pokemonKey= pokemon.name)}>
+                {pokemon.name}
+                </button>))}
         </React.Fragment>
         );
     }

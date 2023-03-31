@@ -31,12 +31,11 @@ const pokemonList = [
   ];
 
 const App = () => {
-  const [pokemonIndex, setPokemonIndex] = useState(0);
-  
+  const [pokemonKey, setPokemonKey] = useState(pokemonList[0].name);
   return (
     <React.Fragment>
-      <PokemonCard { ...pokemonList[pokemonIndex]}/>
-      <NavBar len={pokemonList.length} setPokemonIndex={setPokemonIndex} index={pokemonIndex}/>
+      <PokemonCard pokemonList={pokemonList} pokemonKey={pokemonKey} />
+      <NavBar pokemonList={pokemonList} pokemonKey={pokemonKey} setKey={setPokemonKey}/>
     </React.Fragment>
     
   );
